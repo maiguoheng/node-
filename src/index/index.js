@@ -1,7 +1,9 @@
+ import api from '../api'
 var http = require('http');
 var fs = require('fs');
 //创建一个服务器对象
-server = http.createServer(function (req, res) {
+console.error(1111,api);
+var server = http.createServer(function (req, res) {
   let url = req.url
   let method = req.method
   console.log(url, method)
@@ -12,8 +14,8 @@ server = http.createServer(function (req, res) {
   // 根据url做不同处理
   
   //  返回json
-  let json=JSON.stringify({name:"hahahn"})
-  res.end(json);
+  // let json=JSON.stringify({name:"hahahn"})
+  // res.end(json);
 
   //返回图片
   let imageFilePath = './imgs/keb.png'

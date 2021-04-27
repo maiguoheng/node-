@@ -1,13 +1,16 @@
 {
   "scripts": {
-    "start":"nodemon ./index.js"
+    "start": "npm run build && nodemon --delay 1  ./dist/index/index.js",
+    "build": "babel src -d dist" 
   },
   "dependencies": {
+    "babel-plugin-transform-runtime": "^6.23.0",
     "express": "^4.17.1",
     "fs": "^0.0.1-security",
     "http": "^0.0.1-security"
   },
   "devDependencies": {
+    "babel-preset-env": "^1.7.0",
     "nodemon": "^2.0.7"
   }
 }

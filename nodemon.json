@@ -3,11 +3,12 @@
   "ignore": [
     ".git",
     ".svn",
-    "node_modules/**/node_modules"
+    "node_modules/**/node_modules",
+    "dist"//避免刷新dist文件后循环更新
   ],
   "verbose": true,
   "execMap": {
-    "js": "node --harmony"
+    "js": "npm run build && node --harmony"// js文件更新时，执行build
   },
   "watch": [],
   "env": {
