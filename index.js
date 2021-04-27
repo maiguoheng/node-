@@ -12,8 +12,8 @@ server = http.createServer(function (req, res) {
   // 根据url做不同处理
   
   //  返回json
-  // let json=JSON.stringify({name:"hahahn"})
-  // res.end(json);
+  let json=JSON.stringify({name:"hahahn"})
+  res.end(json);
 
   //返回图片
   let imageFilePath = './imgs/keb.png'
