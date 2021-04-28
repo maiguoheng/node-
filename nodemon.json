@@ -4,11 +4,11 @@
     ".git",
     ".svn",
     "node_modules/**/node_modules",
-    "dist"//避免刷新dist文件后循环更新
+    "dist"
   ],
   "verbose": true,
   "execMap": {
-    "js": "npm run build && node --harmony"// js文件更新时，执行build
+    "js": "npm run build && node --harmony"
   },
   "watch": [],
   "env": {

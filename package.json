@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "npm run build && nodemon --delay 1  ./dist/index/index.js",
-    "build": "babel src -d dist" 
+    "build": "babel src -d dist --copy-files" 
   },
   "dependencies": {
     "babel-plugin-transform-runtime": "^6.23.0",

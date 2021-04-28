@@ -1,6 +1,8 @@
  import api from '../api'
 var http = require('http');
 var fs = require('fs');
+var path = require('path');
+
 //创建一个服务器对象
 console.error(1111,api);
 var server = http.createServer(function (req, res) {
@@ -18,7 +20,7 @@ var server = http.createServer(function (req, res) {
   // res.end(json);
 
   //返回图片
-  let imageFilePath = './imgs/keb.png'
+  let imageFilePath = path.resolve(__dirname,'../imgs/keb.png')
   var stream = fs.createReadStream(imageFilePath);
   var responseData = [];//存储文件流
   res.writeHeader(200, {
