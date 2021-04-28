@@ -1,10 +1,13 @@
 import api from '../api/index'
+let prefix="/node-test" // 在服务端的prefix
 var http = require('http');
+
 
 //创建一个服务器对象
 var server = http.createServer(function (req, res) {
-  let url = req.url
+  let url = req.url.replace(prefix,'')
   let method = req.method
+
   if (api[url] && api[url].methods.includes(method)) {
     api[url].handle(...arguments)
   } else {
