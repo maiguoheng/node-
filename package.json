@@ -1,13 +1,15 @@
 {
   "scripts": {
     "start": "npm run build && nodemon --delay 1  ./dist/index/index.js",
-    "build": "babel src -d dist --copy-files" 
+    "build": "babel src -d dist --copy-files"
   },
   "dependencies": {
+    "babel-cli": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "express": "^4.17.1",
     "fs": "^0.0.1-security",
-    "http": "^0.0.1-security"
+    "http": "^0.0.1-security",
+    "uglify-js": "^3.13.4"
   },
   "devDependencies": {
     "babel-preset-env": "^1.7.0",
